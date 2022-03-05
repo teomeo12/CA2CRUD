@@ -1,5 +1,5 @@
 <?php
-    $dsn = 'mysql:host=localhost;dbname=ca2database';
+    $dsn = 'mysql:host=localhost;dbname=cruddb';
     $username = 'root';
     $password = '';
 

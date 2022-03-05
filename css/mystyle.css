@@ -1,0 +1,524 @@
+h1 {
+  font-size: 150%;
+  margin: 0;
+  padding: 0.5em 0 0.25em;
+}
+
+h2 {
+  font-size: 120%;
+  margin: 0;
+  padding: 0.25em 0 0.5em;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+/* Header start */
+.header {
+  width: 100%;
+  height: 7%;
+  background-color: #131921;
+  font-family: "Odibee Sans", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border: 2px solid green;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header .header__nav .header__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header__alink {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 18pt;
+  font-weight: 100;
+}
+
+.header__alink:hover {
+  color: yellowgreen;
+  text-decoration: underline;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.header__logo {
+  position: absolute;
+  width: 100px;
+  margin: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  left: 10px;
+}
+
+.header__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+}
+
+.header__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.header__searchInput {
+  height: 12px;
+  width: 100%;
+  padding: 9px;
+  border-radius: 2px;
+  /* border: none; */
+}
+
+.header__searchIcon {
+  background-color: greenyellow;
+  height: 22px !important;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+/* Header end */
+nav ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+nav ul li {
+  padding-bottom: 0.5em;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.scroll-down header {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  -webkit-filter: drop-shadow(0 -10px 20px darkorange);
+          filter: drop-shadow(0 -10px 20px darkorange);
+}
+
+.menu-is-open {
+  overflow: hidden;
+}
+
+.menu-is-open header {
+  -webkit-filter: none;
+          filter: none;
+}
+
+body {
+  background-color: #edf2ff;
+}
+
+/* Start container */
+.card-container {
+  /* margin-top: 0; */
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid black;
+  padding: 0.5em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px solid green;
+}
+
+.card {
+  width: 18rem;
+  margin: 5px;
+}
+
+.card .card-img-top img {
+  width: 100%;
+  border-radius: 3px;
+  overflow: none;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.card .card-img-top img:hover {
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+.card .card_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  vertical-align: middle;
+  padding: 3px;
+}
+
+.card .card_buttons .delete_button {
+  vertical-align: middle;
+  border-radius: 10px;
+  color: brown;
+  background-color: white;
+  margin: 0;
+}
+
+.card .card_buttons .delete_button:hover {
+  color: white;
+  background-color: red;
+}
+
+.card .card_buttons .edit_button {
+  vertical-align: middle;
+  border-radius: 10px;
+  color: green;
+  background-color: white;
+  margin: 0;
+}
+
+.card .card_buttons .edit_button:hover {
+  color: white;
+  background-color: green;
+}
+
+/* End container */
+#add_record_form {
+  margin: 0.5em 0 1em;
+}
+
+#add_record_form label {
+  width: 6em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  float: left;
+}
+
+#add_record_form input {
+  float: left;
+  color: green;
+}
+
+#add_record_form input[text] {
+  width: 15em;
+}
+
+#category_list input {
+  float: left;
+  color: purple;
+}
+
+section {
+  float: center;
+  width: 800px;
+  padding-bottom: 1.5em;
+  border: 2px solid blue;
+}
+
+/* Footer Start */
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100%;
+  padding-top: 5px;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  border: 2px solid red;
+  z-index: 99;
+  font-family: "Odibee Sans", sans-serif;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  font-family: "Odibee Sans", sans-serif;
+}
+
+.footer-content .follow {
+  text-align: center;
+  width: 170px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.footer-content .follow a {
+  color: #002e4b;
+  width: 35px;
+  height: 35px;
+  padding-top: 5px;
+  font-size: 1.5em;
+  display: inline-block;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.footer-content .follow a.social_FB {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.footer-content .follow a.social_FB:hover {
+  color: blue;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.footer-content .follow a.social_IN {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.footer-content .follow a.social_IN:hover {
+  color: orangered;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.footer-content .follow a.social_TW {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.footer-content .follow a.social_TW:hover {
+  color: cornflowerblue;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.footer-content .follow a.social_YT {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.footer-content .follow a.social_YT:hover {
+  color: red;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.footer-content .follow .logo-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(10%, orange), color-stop(20%, #4d4d4d));
+  background: linear-gradient(to right, #4d4d4d 0, orange 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s infinite linear;
+          animation: shine 3s infinite linear;
+  padding: 0;
+  margin: 0;
+  font-family: "Odibee Sans", sans-serif;
+}
+
+.footer-content .links {
+  text-align: center;
+  width: 150px;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+  font-family: "Odibee Sans", sans-serif;
+}
+
+.footer-content .links ul {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  list-style-type: none;
+  text-align: left;
+}
+
+.footer-content .links ul a {
+  color: grey;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-content .links ul a:hover {
+  color: white;
+  margin-left: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  text-decoration: none;
+}
+
+.footer-content .links ul li {
+  line-height: 1.1em;
+}
+
+.footer-content .links .logo-text {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  line-height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(10%, orange), color-stop(20%, #4d4d4d));
+  background: linear-gradient(to right, #4d4d4d 0, orange 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s infinite linear;
+          animation: shine 3s infinite linear;
+}
+
+.footer-content .contact {
+  list-style-type: none;
+  text-align: center;
+  width: 250px;
+  float: right;
+}
+
+.footer-content .contact ul {
+  padding-left: 0px;
+  list-style-type: none;
+  display: block;
+  margin-bottom: 8px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.footer-content .contact li {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(10%, aqua), color-stop(20%, #4d4d4d));
+  background: linear-gradient(to right, #4d4d4d 0, aqua 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 5s infinite linear;
+          animation: shine 5s infinite linear;
+}
+
+.footer-content .contact li:hover {
+  color: #32d4da;
+  margin-left: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation: shine 0s infinite linear;
+          animation: shine 0s infinite linear;
+}
+
+.footer-content .contact a {
+  font-family: "Barlow", sans-serif;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(10%, aqua), color-stop(20%, #4d4d4d));
+  background: linear-gradient(to right, #4d4d4d 0, aqua 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 5s infinite linear;
+          animation: shine 5s infinite linear;
+}
+
+.footer-content .contact span {
+  color: white;
+}
+
+.footer-content .contact .logo-text {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(10%, orange), color-stop(20%, #4d4d4d));
+  background: linear-gradient(to right, #4d4d4d 0, orange 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s infinite linear;
+          animation: shine 3s infinite linear;
+}
+
+/* Footer end */
+/*# sourceMappingURL=mystyle.css.map */

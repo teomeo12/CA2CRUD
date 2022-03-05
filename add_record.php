@@ -15,7 +15,7 @@ if ($category_id == null || $category_id == false ||
 
     /**************************** Image upload ****************************/
 
-    error_reporting(~E_NOTICE); 
+    // error_reporting(~E_NOTICE); 
 
 // avoid notice
 

@@ -1,0 +1,194 @@
+/* Footer Start */
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100%;
+  padding-top: 5px;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 300ms ease-in-out;
+  border: 2px solid red;
+  z-index: 99;
+  font-family: "Odibee Sans", sans-serif;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  font-family: "Odibee Sans", sans-serif;
+}
+.footer-content .follow {
+  text-align: center;
+  width: 170px;
+  float: left;
+  margin-bottom: 20px;
+}
+.footer-content .follow a {
+  color: #002e4b;
+  width: 35px;
+  height: 35px;
+  padding-top: 5px;
+  font-size: 1.5em;
+  display: inline-block;
+  transition: all 0.25s;
+}
+.footer-content .follow a.social_FB {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+.footer-content .follow a.social_FB:hover {
+  color: blue;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.footer-content .follow a.social_IN {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+.footer-content .follow a.social_IN:hover {
+  color: orangered;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.footer-content .follow a.social_TW {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+.footer-content .follow a.social_TW:hover {
+  color: cornflowerblue;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.footer-content .follow a.social_YT {
+  color: grey;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5px;
+}
+.footer-content .follow a.social_YT:hover {
+  color: red;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.footer-content .follow .logo-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(to right, #4d4d4d 0, orange 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  padding: 0;
+  margin: 0;
+  font-family: "Odibee Sans", sans-serif;
+}
+.footer-content .links {
+  text-align: center;
+  width: 150px;
+  transition: background-position 275ms ease;
+  font-family: "Odibee Sans", sans-serif;
+}
+.footer-content .links ul {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  transition: all 0.25s;
+  list-style-type: none;
+  text-align: left;
+}
+.footer-content .links ul a {
+  color: grey;
+  transition: all 0.3s;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+}
+.footer-content .links ul a:hover {
+  color: white;
+  margin-left: 10px;
+  transition: all 0.5s;
+  transition: all 500ms ease-in-out;
+  text-decoration: none;
+}
+.footer-content .links ul li {
+  line-height: 1.1em;
+}
+.footer-content .links .logo-text {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  line-height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(to right, #4d4d4d 0, orange 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+.footer-content .contact {
+  list-style-type: none;
+  text-align: center;
+  width: 250px;
+  float: right;
+}
+.footer-content .contact ul {
+  padding-left: 0px;
+  list-style-type: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+  text-align: left;
+}
+.footer-content .contact li {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(to right, #4d4d4d 0, aqua 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+}
+.footer-content .contact li:hover {
+  color: #32d4da;
+  margin-left: 5px;
+  transition: all 0.3s;
+  animation: shine 0s infinite linear;
+}
+.footer-content .contact a {
+  font-family: "Barlow", sans-serif;
+  background: linear-gradient(to right, #4d4d4d 0, aqua 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+}
+.footer-content .contact span {
+  color: white;
+}
+.footer-content .contact .logo-text {
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(to right, #4d4d4d 0, orange 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+/* Footer end */

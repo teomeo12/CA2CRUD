@@ -1,0 +1,137 @@
+body {
+  background-color: $backgroundBody;
+}
+
+/* Start container */
+.card-container {
+  /* margin-top: 0; */
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: $backgroundContainer;
+  border: 2px solid black;
+  padding: 0.5em 2em;
+  display: flex;
+  flex-wrap: wrap;
+
+  border: 2px solid green;
+}
+.card {
+  width: 18rem;
+  margin: 5px;
+
+  & .card-img-top img {
+    width: 100%;
+    border-radius: 3px;
+    overflow: none;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: rotate(1deg);
+    }
+  }
+  & .card_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+    padding: 3px;
+    & .delete_button {
+      vertical-align: middle;
+      border-radius: 10px;
+      color: brown;
+      background-color: white;
+      margin: 0;
+
+      &:hover {
+        color: white;
+        background-color: red;
+      }
+    }
+    & .edit_button {
+      vertical-align: middle;
+      border-radius: 10px;
+      color: green;
+      background-color: white;
+      margin: 0;
+
+      &:hover {
+        color: white;
+        background-color: green;
+      }
+    }
+  }
+}
+
+/* End container */
+
+#add_record_form {
+  margin: 0.5em 0 1em;
+}
+#add_record_form label {
+  width: 6em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  float: left;
+}
+#add_record_form input {
+  float: left;
+  color: green;
+}
+#add_record_form input[text] {
+  width: 15em;
+}
+#category_list input {
+  float: left;
+  color: purple;
+}
+
+section {
+  float: center;
+  width: 800px;
+  padding-bottom: 1.5em;
+  border: 2px solid blue;
+}
+
+// ul {
+//   margin: 0 0 1em 0;
+//   padding: 0 0 0 2.5em;
+// }
+// li {
+//   margin: 0;
+//   padding: 0;
+// }
+// a {
+//   color: red;
+//   font-weight: bold;
+// }
+// a:hover {
+//   color: rgb(208, 133, 4);
+// }
+// table {
+//   border: 1px solid black;
+//   border-collapse: collapse;
+// }
+// td,
+// th {
+//   border: 1px dashed black;
+//   padding: 0.2em 0.5em 0.2em 0.5em;
+//   vertical-align: top;
+//   text-align: left;
+// }
+// form {
+//   margin: 0;
+// }
+// br {
+//   clear: left;
+// }
+// /* the styles for classes */
+// .right {
+//   text-align: right;
+// }
+// .last_paragraph {
+//   margin-bottom: 2em;
+// }
+// .margin_top_increase {
+//   margin-top: 1em;
+// }
