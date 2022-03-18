@@ -96,7 +96,7 @@ include('includes/header.php');
                 <div class="carousel-caption text-start">
                     <h1>Example headline.</h1>
                     <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
                 </div>
 
             </div>
@@ -107,7 +107,7 @@ include('includes/header.php');
                 <div class="carousel-caption">
                     <h1>Another example headline.</h1>
                     <p>Some representative placeholder content for the second slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    <!-- <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> -->
                 </div>
 
             </div>
@@ -118,7 +118,7 @@ include('includes/header.php');
                 <div class="carousel-caption text-end">
                     <h1>One more for good measure.</h1>
                     <p>Some representative placeholder content for the third slide of this carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    <!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
                 </div>
 
             </div>
@@ -157,9 +157,9 @@ include('includes/header.php');
                 </div>
 
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text"><?php echo $record['name']; ?></p>
-                    <a href="#" class="btn btn-primary">View recepe</a>
+                    <h5 class="card-title"><?php echo $record['name']; ?></h5>
+                    <p class="card-text"><?php echo $record['description']; ?></p>
+                    <a href="./recipe1.php" class="btn btn-primary">View recepe</a>
                 </div>
                 <div class="card_buttons">
                     <div>

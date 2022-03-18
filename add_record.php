@@ -1,24 +1,29 @@
 <?php
-
 // Get the product data
+$recordID = filter_input(INPUT_POST, 'recordID', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
-$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+$description = filter_input(INPUT_POST, 'description');
+$method = filter_input(INPUT_POST, 'method');
+$ingredients = filter_input(INPUT_POST, 'ingredients');
+$prep = filter_input(INPUT_POST, 'prep', FILTER_VALIDATE_INT);
+$cook = filter_input(INPUT_POST, 'cook', FILTER_VALIDATE_INT);
+$serve = filter_input(INPUT_POST, 'serve', FILTER_VALIDATE_INT);
 
 // Validate inputs
 if ($category_id == null || $category_id == false ||
-    $name == null || $price == null || $price == false ) {
+    $name == null || 
+    $description == null || $method == null ||$ingredients == null||
+    $prep == null|| $prep == false || $cook == null || $cook == false||
+    $serve == null || $serve == false
+    ) {
     $error = "Invalid product data. Check all fields and try again.";
     include('error.php');
     exit();
 } else {
-
     /**************************** Image upload ****************************/
-
     // error_reporting(~E_NOTICE); 
-
 // avoid notice
-
     $imgFile = $_FILES['image']['name'];
     $tmp_dir = $_FILES['image']['tmp_name'];
     echo $_FILES['image']['tmp_name'];
@@ -56,20 +61,23 @@ if ($category_id == null || $category_id == false ||
             exit();
         }
     }
-
     /************************** End Image upload **************************/
-    
     require_once('database.php');
 
     // Add the product to the database 
     $query = "INSERT INTO records
-                 (categoryID, name, price, image)
-              VALUES
-                 (:category_id, :name, :price, :image)";
+           (categoryID, name, description,method,ingredients,prep,cook,serve, image)
+           VALUES
+           (:category_id, :name, :description, :method, :ingredients, :prep, :cook, :serve,:image)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':name', $name);
-    $statement->bindValue(':price', $price);
+    $statement->bindValue(':description', $description);
+    $statement->bindValue(':method', $method);
+    $statement->bindValue(':ingredients', $ingredients);
+    $statement->bindValue(':prep', $prep);
+    $statement->bindValue(':cook', $cook);
+     $statement->bindValue(':serve', $serve);
     $statement->bindValue(':image', $image);
     $statement->execute();
     $statement->closeCursor();

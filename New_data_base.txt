@@ -1,0 +1,166 @@
+/*-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Feb 20, 2022 at 06:31 PM
+-- Server version: 5.7.34
+-- PHP Version: 7.4.21*/
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+DROP DATABASE IF EXISTS cruddb;
+CREATE DATABASE IF NOT EXISTS cruddb;
+USE cruddb;
+DROP TABLE IF EXISTS categories, records;
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+/*--
+-- Database: `ca2`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--*/
+
+CREATE TABLE `categories` (
+  `categoryID` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*--
+-- Dumping data for table `categories`
+--*/
+
+INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
+(1, 'Starter'),
+(2, 'Breakfast'),
+(3, 'Lunch'),
+(4, 'Main'),
+(5, 'Side'),
+(6, 'Snack');
+
+/*-- --------------------------------------------------------
+
+--
+-- Table structure for table `records`
+--*/
+
+CREATE TABLE `records` (
+  `recordID` int(11) NOT NULL,
+  `categoryID` int(11) NOT NULL,
+  
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `method` text NOT NULL,
+  `ingredients` text NOT NULL,
+  `prep` varchar(255) NOT NULL,
+  `cook` varchar(255) NOT NULL,
+  `serve` int(11) NOT NULL,
+ 
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*--
+-- Dumping data for table `records`
+--*/
+
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `description`,`method`,`ingredients`,`prep`,`cook`,
+`serve`, `image`) VALUES
+
+(1, 1, " Broccoli with Garlic Puy Lentils, Dill & Hazelnuts","", "1.	Preheat the oven to 180C fan/200C/gas 6. Tip the hazelnuts onto a baking sheet, place in the oven to toast for 6-8 minutes. Take out of the oven once the hazelnuts are a deep golden brown.
+2.	Boil or steam the broccoli for about 7 minutes, until bright green and just tender.
+3.	Heat the olive oil in a saucepan on a low heat and then add the garlic. Stir fry for about 30 seconds, being careful not to let the garlic brown, then add the puy lentils. Stir gently for 4-5 minutes to warm through.
+4.	Season to taste with sea salt, freshly ground black pepper and a squeeze of lemon juice. Then add most of the dill and stir through.
+5.	Place the steamed broccoli onto a plate, and dress with the extra virgin olive oil, the remaining lemon juice, and season with sea salt and freshly ground black pepper. Tip the warm puy lentils over, dollop the crème fraiche on top, and then scatter with the hazelnuts and remaining dill. Serve immediately.
+ " ,"•	360g Tenderstem® broccoli
+•	40g hazelnuts, halved
+•	1 tbsp olive oil
+•	1 garlic clove, very finely chopped
+•	250g pack ready-to-eat puy lentils
+•	Pinch of sea salt
+•	Freshly ground black pepper
+•	1-2 tbsp lemon juice
+•	20g dill, roughly chopped
+•	1 tbsp extra-virgin olive oil
+•	2 tbsp half-fat crème fraiche
+" ,"10 minutes","10 minutes","4","1.jpg"),
+/*record 2*/
+(2, 1, "Barbecued Broccoli, Melted Goats Cheese & Sun-Dried Tomato Dressing","Quick to whip up and sure to disappear just as quickly once it is on the table!
+Don’t just save the barbecue for burgers and sausages – this exceptionally flavoursome recipe is a brilliant (barbecued) starter or side dish. You could even serve it as a main dish for vegetarians.", "1.	Toss the  broccoli in the 1 tbsp of olive oil and keep to one side while you make the dressing. Finely chop the sun-dried tomatoes and place in a small bowl with the extra virgin olive oil and balsamic vinegar. Season with salt and pepper and mix well.
+2.	Place the Tenderstem® broccoli on your barbecue and cook for about 5-8 minutes, turning regularly until it is becoming tender with grill lines on the stems.
+3.	Place the barbecued  broccoli on a serving plate and immediately crumble over the goat’s cheese so it starts to melt just slightly from the heat of the  broccoli.
+4.	Spoon over the dressing, scatter with the pine nuts and serve straight away.
+","•360g Tenderstem® broccoli
+•	40g hazelnuts, halved
+•	1 tbsp olive oil
+•	1 garlic clove, very finely chopped
+•	250g pack ready-to-eat puy lentils
+•	Pinch of sea salt
+•	Freshly ground black pepper
+•	1-2 tbsp lemon juice
+•	20g dill, roughly chopped
+•	1 tbsp extra-virgin olive oil
+•	2 tbsp half-fat crème fraiche
+" ,"10 minutes","10 minutes","4","2.jpg"),
+-- record3
+(3, 1, "Mozzarella Stuffed Figs Wrapped in Parma Ham with Garlic Butter broccoli & Orange Zest","These pretty little Autumnal parcels of flavour are deceptively filling; making a perfect light meal for one or an appetiser for two!", "1.	Snip the ends off the fig stalks. This makes them easier to cut through. Cut a cross through the stalk down to nearly the base of the fig taking care not to completely cut it into quarters
+2.	Cut the mozzarella into 4 and place a piece inside each fig. Wrap each fig with a slice of Parma ham and then skewer two figs onto each skewer ensuring you pierce the fig flesh, the cheese and the fig flesh on the other side. You don't want them to be loose on the skewers.
+3.	Place them under a medium grill for 5-10 minutes until the cheese is starting to turn golden
+4.	Meanwhile heat your butter and garlic in a wok or frying pan on a medium heat and add your Tenderstem® broccoli. Toss the broccoli often so that it's covered in the garlic butter and put a lid over it
+5.	Use this time to grate your orange zest
+6.	After 5 minutes, toss again, season well and plate up. Sprinkle your zest over everything and give the figs a little black pepper
+","•	4 figs
+•	4 slices parma ham
+•	1/2 ball of Mozzarella
+•	Big handful of Tenderstem® broccoli
+•	2 tsp orange zest
+•	1 garlic clove
+•	25g salted butter
+
+" ,"5 minutes","10 minutes","2","3.jpg");
+
+/*--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `categories`
+--*/
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`categoryID`);
+
+/*--
+-- Indexes for table `records`
+--*/
+ALTER TABLE `records`
+  ADD PRIMARY KEY (`recordID`);
+
+/*--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categories`
+--*/
+ALTER TABLE `categories`
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+/*--
+-- AUTO_INCREMENT for table `records`
+--*/
+ALTER TABLE `records`
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
