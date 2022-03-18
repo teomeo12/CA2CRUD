@@ -69,25 +69,36 @@ include('includes/header.php');
                 <br>
             </div>
             <div class="form-group">
+                <label>Record ID:</label>
+                <input class="form-control" type="record_id" name="record_id"
+                    value="<?php echo $records['recordID']; ?>" />
+                <br>
+            </div>
+            <div class="form-group">
                 <label>Name:</label>
                 <input class="form-control" type="input" name="name" value="<?php echo $records['name']; ?>" />
                 <br>
             </div>
             <div class="form-group">
                 <label>Description</label>
-                <input class="form-control" type="text" name="description"
-                    value="<?php echo $records['description']; ?>">
+                <!-- <input class="form-control" type="text" name="description"
+                    value="<?php echo $records['description']; ?>"> -->
+
+                <textarea class=" form-control" name="description" rows="3" cols="25"
+                    placeholder="<?php echo $records['description']; ?>"></textarea>
 
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Method</label>
-                <input class="form-control" type="text" name="method" value="<?php echo $records['method']; ?>">
 
+                <textarea class=" form-control" name="method" rows="5" cols="25"
+                    placeholder="<?php echo $records['method']; ?>"></textarea>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Ingredients</label>
-                <input class="form-control" type="text" name="ingredients"
-                    value="<?php echo $records['ingredients']; ?>">
+
+                <textarea class=" form-control" name="ingredients" rows="5" cols="25"
+                    placeholder="<?php echo $records['ingredients']; ?>"></textarea>
 
             </div>
             <div class="form-group">
@@ -110,31 +121,19 @@ include('includes/header.php');
 
                 <label>Choose image:</label>
                 <input type="file" class="form-control-file" name="image" accept="image/*" />
-                <br>
+                <br> </br>
                 <?php if ($records['image'] != "") { ?>
-                <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
+                <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" border-radius="3" /></p>
                 <?php } ?>
             </div>
 
             <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
 
-            <!-- <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br>
-        <br> </br> -->
 
-            <div class="form-buttons">
-                <input type="submit" class="btn btn-outline-success" value="Add Record">
+
+
+            <div class=" form-buttons">
+                <input type="submit" class="btn btn-outline-success" value="Edit Record">
 
 
                 <a href="./index.php" class="btn btn-outline-danger">Cancel</a>
@@ -144,32 +143,7 @@ include('includes/header.php');
         </form>
 
 
-        <form action="edit_record.php" method="post" enctype="multipart/form-data" id="">
-            <input type="hidden" name="original_image" value="<?php echo $records['image']; ?>" />
-            <input type="hidden" name="record_id" value="<?php echo $records['recordID']; ?>" />
 
-            <label>Category ID:</label>
-            <input type="category_id" name="category_id" value="<?php echo $records['categoryID']; ?>" />
-            <br>
-
-            <label>Name:</label>
-            <input type="input" name="name" value="<?php echo $records['name']; ?>" />
-            <br>
-            <label>List Price:</label>
-            <input type="input" name="price" value="<?php echo $records['price']; ?>">
-            <br>
-
-            <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
-            <br>
-            <?php if ($records['image'] != "") { ?>
-            <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
-            <?php } ?>
-
-            <label>&nbsp;</label>
-            <input type="submit" value="Save Changes">
-            <br>
-        </form>
     </div>
     <?php
 include('includes/footer.php');
@@ -177,3 +151,31 @@ include('includes/footer.php');
 </body>
 
 </html>
+
+<!-- 
+<form action="edit_record.php" method="post" enctype="multipart/form-data" id="">
+    <input type="hidden" name="original_image" value="<?php echo $records['image']; ?>" />
+    <input type="hidden" name="record_id" value="<?php echo $records['recordID']; ?>" />
+
+    <label>Category ID:</label>
+    <input type="category_id" name="category_id" value="<?php echo $records['categoryID']; ?>" />
+    <br>
+
+    <label>Name:</label>
+    <input type="input" name="name" value="<?php echo $records['name']; ?>" />
+    <br>
+    <label>List Price:</label>
+    <input type="input" name="price" value="<?php echo $records['price']; ?>">
+    <br>
+
+    <label>Image:</label>
+    <input type="file" name="image" accept="image/*" />
+    <br>
+    <?php if ($records['image'] != "") { ?>
+    <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
+    <?php } ?>
+
+    <label>&nbsp;</label>
+    <input type="submit" value="Save Changes">
+    <br>
+</form> -->

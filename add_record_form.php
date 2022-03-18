@@ -71,19 +71,24 @@ include('includes/header.php');
             </div>
             <div class="form-group">
                 <label>Description</label>
-                <input class="form-control" type="text" name="description"
-                    placeholder=" Enter the Description of the product">
+
+                <textarea class=" form-control" name="description" rows="3" cols="25"
+                    placeholder="Enter the Description of the product"></textarea>
 
             </div>
             <div class="form-group">
                 <label>Method</label>
-                <input class="form-control" type="text" name="method" placeholder=" Enter the Method of preparation">
-
+                <!-- <input class="form-control" type="text" name="method" placeholder=" Enter the Method of preparation"> -->
+                <textarea class=" form-control" name="method" rows="5" cols="25"
+                    placeholder="Enter the Method of preparation"></textarea>
             </div>
             <div class="form-group">
                 <label>Ingredients</label>
-                <input class="form-control" type="text" name="ingredients"
-                    placeholder=" Enter the Ingredients of the product">
+                <!-- <input class="form-control" type="text" name="ingredients" 
+                placeholder=" Enter the Ingredients of the product">-->
+                <textarea class=" form-control" name="ingredients" rows="5" cols="25"
+                    placeholder=" Enter the Ingredients of the product"></textarea>
+
 
             </div>
             <div class="form-group">
@@ -115,14 +120,8 @@ include('includes/header.php');
             <br> </br>
             <br> </br>
             <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
-            <br> </br>
+
+
 
             <div class="form-buttons">
                 <input type="submit" class="btn btn-outline-success" value="Add Record">
