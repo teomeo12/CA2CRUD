@@ -23,7 +23,7 @@ $statement->closeCursor();
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Healty Recepies</title>
-    <style>
+    <!-- <style>
     .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -37,7 +37,7 @@ $statement->closeCursor();
             font-size: 3.5rem;
         }
     }
-    </style>
+    </style> -->
     <link href="carousel.css" rel="stylesheet">
     <link href="./css/mystyle.css" rel="stylesheet">
 </head>

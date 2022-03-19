@@ -9,43 +9,30 @@
 <!-- the body section -->
 
 <body>
+    <div class="container__logo">
+        <div class="logo">
+            <a href="index.php"> <img src=" ./images/e.png" alt="Logo" /></a>
+        </div>
+
+    </div>
     <header>
+
         <nav class="header">
-            <a href="index.php"> <img src="./images/e.png" class="header__logo" alt="Logo" /></a>
 
-            <!-- <div class="header__nav">
-                <div class="header__link">
-                    <div class="header__option">
-                        <span class="header__optionLineTwo">
+            <!-- <div class="header__nav"> -->
 
-                        </span>
-                    </div>
-                </div>
+            <div class="header__link">
 
-                </div> -->
+                <a class="header__alink" href="index.php">Homepage</a>
+                <?php foreach ($categories as $category) : ?>
+                <a class="header__alink" href=".?category_id=<?php echo $category['categoryID']; ?>">
+                    <?php echo $category['categoryName']; ?>
+                </a>
+                <?php endforeach; ?>
 
-            <div class="header__nav">
 
-                <div class="header__link">
-
-                    <a class="header__alink" href="index.php">Homepage</a>
-                    <?php foreach ($categories as $category) : ?>
-                    <a class="header__alink" href=".?category_id=<?php echo $category['categoryID']; ?>">
-                        <?php echo $category['categoryName']; ?>
-                    </a>
-                    <?php endforeach; ?>
-
-                    <div class="manage-categories">
-                        <form action=" add_record_form.php" method="post" id="add_record_form">
-
-                            <input type="submit" value="Add Record">
-                        </form>
-                        <form action="category_list.php" method="post" id="category_list">
-
-                            <input type="submit" value="Manage Categories">
-                        </form>
-                    </div>
-                </div>
+            </div>
+            <!-- </div> -->
         </nav>
 
 

@@ -53,7 +53,7 @@ $statement3->closeCursor();
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Healty Recepies</title>
-    <style>
+    <!-- <style>
     .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -67,7 +67,7 @@ $statement3->closeCursor();
             font-size: 3.5rem;
         }
     }
-    </style>
+    </style> -->
     <link href="carousel.css" rel="stylesheet">
     <link href="./css/mystyle.css" rel="stylesheet">
 </head>
@@ -90,14 +90,18 @@ include('includes/header.php');
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
                 </svg> -->
+                <div class="carousel-caption text-start">
+                    <strong>
+                        <h1>The best recepies</h1>
+                    </strong>
+
+                    <p>Take your dinner to new heights</p>
+                    <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+                </div>
                 <img class="d-block w-100" width="100%" height="100%" src="./images/1.jpg" alt="First slide">
 
 
-                <div class="carousel-caption text-start">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
-                </div>
+
 
             </div>
             <div class="carousel-item">
@@ -105,8 +109,8 @@ include('includes/header.php');
 
 
                 <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <h1>The best recepies</h1>
+                    <p>Work Lunches Have Never Been Tastier!</p>
                     <!-- <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> -->
                 </div>
 
@@ -117,7 +121,7 @@ include('includes/header.php');
 
                 <div class="carousel-caption text-end">
                     <h1>One more for good measure.</h1>
-                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p>Green wins Gold! Best Speedy Supper for the Healthy Food Guide</p>
                     <!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
                 </div>
 
@@ -137,13 +141,17 @@ include('includes/header.php');
 
     <!-- Container Start -->
 
+
     <div class=" card-container">
         <!-- display a list of categories -->
+        <div>
+            <h2><?php echo $category_name; ?></h2>
+        </div>
         <div class="container">
 
         </div>
         <!-- display a table of records -->
-        <!-- <div><h2><?php echo $category_name; ?></h2></div> -->
+
 
         <br><br>
         <table>
@@ -185,6 +193,8 @@ include('includes/header.php');
             <?php endforeach; ?>
         </table>
 
+
+
         <!-- <form action="add_record_form.php" method="post" id="add_record_form">
 
                 <input type="submit" value="Add Record">
@@ -199,6 +209,16 @@ include('includes/header.php');
 
     </div>
     <!-- Container End -->
+    <div class="manage-categories">
+        <form action=" add_record_form.php" method="post">
+
+            <input class="btn btn-outline-success" type="submit" value="Add Record">
+        </form>
+        <form action="category_list.php" method="post">
+
+            <input class="btn btn-outline-danger" type="submit" value="Manage Categories">
+        </form>
+    </div>
 
 
     <?php

@@ -1,7 +1,7 @@
 <?php
 
 // Get the record data
- $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
+$record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $description = filter_input(INPUT_POST, 'description');
@@ -11,12 +11,12 @@ $prep = filter_input(INPUT_POST, 'prep', FILTER_VALIDATE_INT);
 $cook = filter_input(INPUT_POST, 'cook', FILTER_VALIDATE_INT);
 $serve = filter_input(INPUT_POST, 'serve', FILTER_VALIDATE_INT);
 
-//$record_id == NULL || $record_id == FALSE ||
+//|| empty($description)|| empty($ingredients) ||
+//$prep == NULL || $prep == FALSE || $cook == NULL || $cook == FALSE ||
+//$serve == NULL || $serve == FALSE
 // Validate inputs
 if ( $record_id == NULL || $record_id == FALSE ||$category_id == NULL ||
-$category_id == FALSE || empty($name) || empty($description)|| empty($ingredients) ||
-$prep == NULL || $prep == FALSE || $cook == NULL || $cook == FALSE ||
-$serve == NULL || $serve == FALSE) {
+$category_id == FALSE || empty($name) ) {
 $error = "Invalid record data. Check all fields and try again.";
 include('error.php');
 } else {
@@ -76,7 +76,7 @@ $statement->bindValue(':prep', $prep);
 $statement->bindValue(':cook', $cook);
 $statement->bindValue(':serve', $serve);
 $statement->bindValue(':image', $image);
- $statement->bindValue(':record_id', $record_id);
+$statement->bindValue(':record_id', $record_id);
 $statement->execute();
 $statement->closeCursor();
 

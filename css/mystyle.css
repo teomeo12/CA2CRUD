@@ -49,7 +49,10 @@ h2 {
 }
 
 .header .header__nav .header__link {
+  text-align: center;
   color: #fff;
+  width: 100rem;
+  border: 2px solid red;
   text-decoration: none;
 }
 
@@ -72,13 +75,20 @@ li {
   transition: all 400ms ease-in-out;
 }
 
-.header__logo {
-  position: absolute;
-  width: 100px;
-  margin: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
-  left: 10px;
+.container__logo {
+  text-align: center;
+  height: 100px;
+  background-color: #7a7a7a;
+}
+
+.container__logo .img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo img {
+  width: 250px;
+  height: 100px;
 }
 
 .header__option {
@@ -114,6 +124,15 @@ li {
   height: 22px !important;
   padding: 5px;
   border-radius: 2px;
+}
+
+.manage-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* Header end */
@@ -171,11 +190,40 @@ body {
           flex-direction: column;
 }
 
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
 .form-container {
   background-color: antiquewhite;
   padding: 10px;
   height: 90%;
   width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 5px 5px 5px 5px grey;
+          box-shadow: 5px 5px 5px 5px grey;
+  border-radius: 5px;
+}
+
+.categoryForm-container {
+  background-color: #b0bbaf;
+  padding: 10px;
+  height: 90%;
+  width: 40%;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: auto;
@@ -191,7 +239,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   width: 80%;
   height: 100%;
-  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #ffffff;
   border: 2px solid black;
   padding: 0.5em 2em;

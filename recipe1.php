@@ -168,13 +168,13 @@ include('includes/header.php');
 
                 <div class="card-body">
                     <h5 class="card-title"></h5>
-                    <p class="card-text"><?php echo $record['description']; ?></p>
+                    <p class="card-text"><?php echo $records['description']; ?></p>
 
                 </div>
                 <div class="card_buttons">
                     <div>
                         <form action="delete_record.php" method="post" id="delete_record_form">
-                            <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+                            <input type="hidden" name="record_id" value="<?php echo $records['recordID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
                             <!-- <input type="submit" value="Delete"> -->
                             <button class="delete_button" type="submit" name="submit"><i

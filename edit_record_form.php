@@ -1,12 +1,6 @@
 <?php
 require('database.php');
-$query = 'SELECT *
-          FROM categories
-          ORDER BY categoryID';
-$statement = $db->prepare($query);
-$statement->execute();
-$categories = $statement->fetchAll();
-$statement->closeCursor();
+
 
 
 $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
@@ -152,30 +146,13 @@ include('includes/footer.php');
 
 </html>
 
-<!-- 
-<form action="edit_record.php" method="post" enctype="multipart/form-data" id="">
-    <input type="hidden" name="original_image" value="<?php echo $records['image']; ?>" />
-    <input type="hidden" name="record_id" value="<?php echo $records['recordID']; ?>" />
 
-    <label>Category ID:</label>
-    <input type="category_id" name="category_id" value="<?php echo $records['categoryID']; ?>" />
-    <br>
 
-    <label>Name:</label>
-    <input type="input" name="name" value="<?php echo $records['name']; ?>" />
-    <br>
-    <label>List Price:</label>
-    <input type="input" name="price" value="<?php echo $records['price']; ?>">
-    <br>
 
-    <label>Image:</label>
-    <input type="file" name="image" accept="image/*" />
-    <br>
-    <?php if ($records['image'] != "") { ?>
-    <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
-    <?php } ?>
-
-    <label>&nbsp;</label>
-    <input type="submit" value="Save Changes">
-    <br>
-</form> -->
+<!-- $query = 'SELECT *
+FROM categories
+ORDER BY categoryID';
+$statement = $db->prepare($query);
+$statement->execute();
+$categories = $statement->fetchAll();
+$statement->closeCursor(); -->
