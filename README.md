@@ -22,5 +22,5 @@ The application gives the user one of the best healthy everyday recipes. There's
 
 ## You could find the layout of the application below:
 
-![alt text](https://github.com/teomeo12/CA2CRUD/blob/main/images/appLayout.jpg "Logo Title Text 1")
+![alt text](https://github.com/teomeo12/CA2CRUD/blob/main/images/appLayout.JPG"Logo Title Text 1")
 
