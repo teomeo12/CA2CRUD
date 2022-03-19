@@ -144,10 +144,10 @@ include('includes/header.php');
 
     <div class=" card-container">
         <!-- display a list of categories -->
-        <div>
+        <div class="category-name">
             <h2><?php echo $category_name; ?></h2>
         </div>
-        <div class="container">
+        <div class=" container">
 
         </div>
         <!-- display a table of records -->
@@ -167,7 +167,7 @@ include('includes/header.php');
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $record['name']; ?></h5>
                     <p class="card-text"><?php echo $record['description']; ?></p>
-                    <a href="./recipe1.php" class="btn btn-primary">View recepe</a>
+                    <a href="./recipe1.php" class="btn btn-outline-success">View recepe</a>
                 </div>
                 <div class="card_buttons">
                     <div>

@@ -55,12 +55,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: $backgroundContainer;
-  border: 2px solid black;
+  // border: 2px solid black;
   padding: 0.5em 2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 2px solid green;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px rgb(150, 194, 168);
+  // border: 2px solid green;
 }
 .card {
   width: 18rem;
@@ -119,7 +121,22 @@ body {
     text-align: center;
   }
 }
-
+.card-body  {
+  
+  text-align: center;
+  & a{
+    font-family: "Odibee Sans", sans-serif;
+  }
+  
+}
+.category-name{
+  font-size: 20pt;
+  
+  font-family: "Odibee Sans", sans-serif;
+  & h2{
+color:green;
+  }
+}
 /* End container */
 //Add Form
 #add_record_form {
