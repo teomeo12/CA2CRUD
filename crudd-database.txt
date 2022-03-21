@@ -1,0 +1,121 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 19, 2022 at 03:28 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `cruddb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE `categories` (
+  `categoryID` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
+(1, 'Starter'),
+(2, 'Breakfast'),
+(3, 'Lunch'),
+(4, 'Main'),
+(5, 'Side'),
+(6, 'Snack');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `records`
+--
+
+DROP TABLE IF EXISTS `records`;
+CREATE TABLE `records` (
+  `recordID` int(11) NOT NULL,
+  `categoryID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `method` text NOT NULL,
+  `ingredients` text NOT NULL,
+  `prep` varchar(255) NOT NULL,
+  `cook` varchar(255) NOT NULL,
+  `serve` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `records`
+--
+
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `description`, `method`, `ingredients`, `prep`, `cook`, `serve`, `image`) VALUES
+(1, 1, 'Smoky Three Cheese Polenta with Sautéed  broccoli, Chorizo Crumbs & Parsley', ' Broccoli has teamed up with food blog “Always so Hungry” to create this irresistible recipe - the perfect starter to impress on a date night.', '1.	Bring a large pan of salted water to the boil. Add the  broccoli and simmer until just cooked through, with a little bite, about 5-7 minutes. Drain and run under cold water to stop the Tenderstem® broccoli cooking and set the colour and texture.\r\n2.	Heat 1/2 tbsp of olive oil in a frying pan and add the chorizo. Fry until golden then remove to drain on kitchen paper, keeping the fragrant oil in the pan. Add the breadcrumbs and fry in the oil until crispy - about 3 minutes. Combine with the cooked chorizo.\r\n3.	Fill a large saucepan with 1 litre of cold water and a pinch of salt. Bring to a simmer then slowly pour in the polenta. Lower the heat immediately and stir continuously until cooked, about 5-7 minutes.\r\n4.	Remove from the heat and add all of the cheese, stirring until completely dissolved. If you’d like extra smoky flavour, add up to 1 tsp of chipotle paste.\r\n5.	In a large frying pan, heat 1 tbsp of oil and add the tender stem and garlic slices. Sauté until heated through and the garlic is crispy.\r\n6.	To serve, reheat the polenta and divide between four plates. Top with the Tenderstem® broccoli and sprinkle with chorizo crumbs and chopped parsley.\r\n', '•	200g  broccoli\r\n•	1 1/2 tbsp extra virgin olive oil\r\n•	50g chorizo, finely chopped or blitzed in a food processor\r\n•	40g fresh breadcrumbs\r\n•	200g instant polenta\r\n•	50g smoked cheese, grated\r\n•	30g grated mozzarella\r\n•	30g parmesan, grated\r\n•	1 tsp chipotle paste, optional\r\n•	1 garlic clove, thinly sliced\r\n•	1 small bunch fresh parsley, roughly chopped\r\n', '', '', 4, '669022.jpg'),
+(2, 1, 'Barbecued Broccoli, Melted Goats Cheese & Sun-Dried Tomato Dressing', 'Quick to whip up and sure to disappear just as quickly once it is on the table!\r\nDon’t just save the barbecue for burgers and sausages – this exceptionally flavoursome recipe is a brilliant (barbecued) starter or side dish. You could even serve it as a ma', '1.	Toss the  broccoli in the 1 tbsp of olive oil and keep to one side while you make the dressing. Finely chop the sun-dried tomatoes and place in a small bowl with the extra virgin olive oil and balsamic vinegar. Season with salt and pepper and mix well.\r\n2.	Place the Tenderstem® broccoli on your barbecue and cook for about 5-8 minutes, turning regularly until it is becoming tender with grill lines on the stems.\r\n3.	Place the barbecued  broccoli on a serving plate and immediately crumble over the goat’s cheese so it starts to melt just slightly from the heat of the  broccoli.\r\n4.	Spoon over the dressing, scatter with the pine nuts and serve straight away.\r\n', '•360g Tenderstem® broccoli\r\n•	40g hazelnuts, halved\r\n•	1 tbsp olive oil\r\n•	1 garlic clove, very finely chopped\r\n•	250g pack ready-to-eat puy lentils\r\n•	Pinch of sea salt\r\n•	Freshly ground black pepper\r\n•	1-2 tbsp lemon juice\r\n•	20g dill, roughly chopped\r\n•	1 tbsp extra-virgin olive oil\r\n•	2 tbsp half-fat crème fraiche\r\n', '10 minutes', '10 minutes', 4, '2.jpg'),
+(3, 1, 'Mozzarella Stuffed Figs Wrapped in Parma Ham with Garlic Butter broccoli & Orange Zest', 'These pretty little Autumnal parcels of flavour are deceptively filling; making a perfect light meal for one or an appetiser for two!', '1.	Snip the ends off the fig stalks. This makes them easier to cut through. Cut a cross through the stalk down to nearly the base of the fig taking care not to completely cut it into quarters\r\n2.	Cut the mozzarella into 4 and place a piece inside each fig. Wrap each fig with a slice of Parma ham and then skewer two figs onto each skewer ensuring you pierce the fig flesh, the cheese and the fig flesh on the other side. You don\'t want them to be loose on the skewers.\r\n3.	Place them under a medium grill for 5-10 minutes until the cheese is starting to turn golden\r\n4.	Meanwhile heat your butter and garlic in a wok or frying pan on a medium heat and add your Tenderstem® broccoli. Toss the broccoli often so that it\'s covered in the garlic butter and put a lid over it\r\n5.	Use this time to grate your orange zest\r\n6.	After 5 minutes, toss again, season well and plate up. Sprinkle your zest over everything and give the figs a little black pepper\r\n', '•	4 figs\r\n•	4 slices parma ham\r\n•	1/2 ball of Mozzarella\r\n•	Big handful of Tenderstem® broccoli\r\n•	2 tsp orange zest\r\n•	1 garlic clove\r\n•	25g salted butter\r\n\r\n', '5 minutes', '10 minutes', 2, '3.jpg'),
+(14, 1, 'Bruschetta with broccoli, Garlic Mushrooms & Feta', 'This Italian staple is so open to variation. Here’s our suggestion. One of the broccoli in Ten’ recipes – ten recipes ready in less than ten minutes – this bruschetta would make a speedy and delicious lunch or supper snack.', '1.	Slice open the ciabatta loaf, and cut each side in half. Brush with good olive oil and grill until nicely toasted. 2.	Steam or boil the Tenderstem® broccoli for about 3 minutes until tender. 3.	Sauté the mushrooms in a knob of butter and 1 or 2 crushed garlic cloves and season well with salt and pepper. 4.	Add the cooked Tenderstem® broccoli and toss well to coat it in the garlicky juices. 5.	Pile the Tenderstem® broccoli and mushrooms onto the ciabatta and top with the crumbled feta cheese. 6.	Put the bruschetta back under the grill for about 2 minutes until the cheese just starts to soften.', '•	200g packet Tenderstem® broccoli •	200g crumbled feta cheese •	2 handfuls mushrooms – any variety •	Large knob butter •	1-2 cloves garlic, crushed •	1 ciabatta loaf', '5', '10', 4, '842612.jpg'),
+(15, 1, 'Bruschetta with sdcsdcdscbroccoli, Garlic Mushrooms & Feta', '435345354645rtgrtgrtgrtgrtg45t45t4g4tg45g', '', '', '5', '10', 5, '156041.jpg'),
+(17, 2, ' Broccoli with Ricotta, Lemon & Shaved Parmesan', 'In this recipe, the creamy ricotta is cut through by the zingy lemon juice. Underpinning these contrasting flavours is the sweet nuttiness of Tenderstem® broccoli.', 'Steam the Tenderstem® broccoli for 3-4 minutes until just tender.  While the Tenderstem® broccoli is cooking gently break the ricotta into lumps and shave the parmesan into nice curls.  Put the hot Tenderstem® broccoli onto plates and dot ricotta over the top. Sprinkle on the zest and spoon on some lemon juice. Scatter the parmesan over each serving. Drizzle with the olive oil, sprinkle with salt, grind on some black pepper and serve.', '300g Tenderstem® broccoli 175g fresh ricotta Zest of ½ lemon, removed with a zester rather than grated Juice of 1 lemon 8 tbs extra virgin olive oil 50g parmesan Salt and freshly ground black pepper', '5', '5', 4, '366059.jpg'),
+(18, 2, 'Poached eggs with  broccoli, parmesan and truffle oil', 'This dish uses just four ingredients for maximum impact – serve it for breakfast to start the day or as part of a lazy weekend brunch. Ready in 10 minutes, this dish uses ingredients you’re likely to have in your store cupboard or fridge, making it the pe', 'Steam the  broccoli for 2 minutes in salted water.  Bring a small saucepan of water to the simmer. Swirl the water to make a whirlpool then in one quick movement, tip the egg into the middle of the whirlpool. Do the same with the second egg and cook for 2 ½ - 3 minutes for a runny yolk.  Remove eggs with a slotted spoon and drain on kitchen towel.  Arrange the  broccoli on a plate, top with the eggs, sprinkle with the parmesan shavings and drizzle with truffle oil. Season and enjoy!', '200g Tenderstem® broccoli 2 eggs 10-15 Parmesan shavings Truffle oil', '5', '5', 2, '239323.jpg'),
+(19, 2, 'Drink Your Greens Smoothie', 'This smoothie is a great way to kick start your day. Packed full of goodness and vitamins and ready in minutes, this will you keep you energised for the rest of the day.', 'Add all ingredients into your blender  Blend for 1 minute until smooth  Pour into a glass, over ice if desired, and enjoy!', '4-6  broccoli 1 apple 250ml coconut water 1tsp grated ginger ½tsp matcha powder (optional, but will give you a slow energy and caffeine release throughout the day)', '5', '5', 1, '451850.jpg'),
+(20, 2, 'Broccoli, Bacon & Egg Brunch Salad', 'A lovely surprise for the late risers among us to wake up to. Brunch with bells', 'Put a pan of water on to boil. Get a non-stick frying pan over a medium-high heat and add a drop of olive oil.  Add the lardons and fry for 5-7 minutes, stirring occasionally, until crisp  Meanwhile, make the dressing by whisking together the mustard, vinegar, and olive oil with a pinch of salt and pepper. Set aside.  To the pan of now boiling water, carefully drop in the eggs and boil for 4 minutes. Remove with a slotted spoon and put in a bowl of cold water.  Add a pinch of salt to the same pan and simmer the Tenderstem® broccoli for 2 minutes until tender. Meanwhile carefully peel the eggs.  Drain the Tenderstem® broccoli well and arrange on a plate. Scatter over the lardons, and top with quail eggs, artfully cutting in half if you like. Finish with salad leaves, parmesan, and the dressing.', '1 tsp olive oil 100g smoked lardons 1/2 tsp dijon mustard 2 tsp white wine vinegar 4 tsp olive oil Either 2 hen or 2 quail eggs 200g Tenderstem® broccoli A handful of salad leaves Parmesan shavings Salt and pepper', '5', '10', 2, '555527.jpg'),
+(21, 2, 'Charred  broccoli with Smoky Romesco Sauce & Toasted Almonds', 'This recipe by Donal Skehan is the perfect option for an extra-special weekend brunch.  The romesco sauce recipe makes a generous amount - save leftovers in a jar in the fridge with some extra virgin olive oil on top of the sauce to seal its freshness. Se', 'Prepare the romesco sauce by placing all the ingredients in a food processor and blitzing until they are combined but still have texture. Season with sea salt and ground black pepper.  Heat a large griddle pan over a medium heat. Brush the Tenderstem® broccoli with oil and butter and arrange across the base of the pan. Sprinkle generously with sea salt and allow to char for approximately 4 minutes either side until tender and each piece has deep char marks. If you would prefer your Tenderstem even more tender, add a splash of water to the pan and cover with a lid for 1-2 minutes.  Spread each slice of sourdough toast with ricotta and top with charred Tenderstem® broccoli, romesco sauce and toasted almonds.  Serve while the Tenderstem® broccoli is still warm.', '500g  broccoli 2 tbsp olive oil 1 tbsp butter 4-6 slices sourdough bread, toasted 250g ricotta 4 tbsp flaked almonds, toasted Sea salt', '15', '10', 4, '966577.jpg'),
+(22, 3, 'Whipped feta thyme and honey dip with griddled  broccoli', 'A simple, tasty lunch comes in the form of this feta, thyme and honey dip accompanied with the deliciously dippable broccoli.', 'Add the feta, cream cheese, thyme, honey, oil and pepper to a food processor and blitz until smooth. If too thick, add a couple of tbsp of water to loosen.  Heat a griddle pan to the highest setting. Drizzle the Tenderstem®broccoli with the olive oil and griddle for 8-10 minutes.  Toast the flaked almonds in a dry pan until they turn golden. Sprinkle over the Tenderstem® broccoli.  Serve the dip with the Tenderstem® broccoli and with bread or pitta.', '100g feta 180g cream cheese 3 sprigs of thyme, stalks discarded 1 tbsp of runny honey 1 tbsp of extra virgin oil Cracked black pepper 250g Tenderstem® broccoli 1 tbsp of olive oil 1 Handful of flaked almonds', '5', '10', 4, '105796.jpg'),
+(23, 4, 'Spicy peanut beef and  broccoli stir frywfcewrfve', 'erfvvfervervevevesdcvrtnytumkyu,yn', 'thymyui,lio.;i,yunjtyjyilio;ipu', 'tymymui,li8oluiktyhn', '10', '10', 2, '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`categoryID`);
+
+--
+-- Indexes for table `records`
+--
+ALTER TABLE `records`
+  ADD PRIMARY KEY (`recordID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `records`
+--
+ALTER TABLE `records`
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
